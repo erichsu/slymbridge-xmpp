@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ejabberd:
+    image: "ejabberd/ecs"
+    ports:
+      - "5222:5222"
+      - "5280:5280"
+      # - "5269:5269"
+    volumes:
+      - "./database:/home/ejabberd/database"
+      - "./ejabberd.yml:/home/ejabberd/conf/ejabberd.yml"
+      
