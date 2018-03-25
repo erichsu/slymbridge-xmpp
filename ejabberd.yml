@@ -727,7 +727,8 @@ modules:
   ## XEP-0313: Message Archive Management
   ## You might want to setup a SQL backend for MAM because the mnesia database is
   ## limited to 2GB which might be exceeded on large servers
-  ## mod_mam: {} # for xep0313, mnesia is limited to 2GB, better use an SQL backend
+  mod_mam:  # for xep0313, mnesia is limited to 2GB, better use an SQL backend
+    default: always
   mod_muc:
     ## host: "conference.@HOST@"
     access:
